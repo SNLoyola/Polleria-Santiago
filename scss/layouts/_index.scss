@@ -1,0 +1,130 @@
+@use "../base/colors" as v;
+@use "../base/typography" as c;
+
+.index-body{
+    background-color: v.$color-background-whiteCream;
+
+    min-height: 100%;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .header{
+        img{
+            width: 100%;
+        }
+    }
+    .index-main{
+        margin-top: 5%;
+
+        flex: 1;
+        .main-block{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            
+            align-items: center;
+            justify-items: center;
+            
+            .elementos{
+                width: 160px;
+                height: 142px;
+                font-family: c.$font-primary;
+
+                border-radius: 15%;
+                a{
+                    width: 160px;
+                    height: 142px;
+
+                    text-decoration: none;
+                    color: #fff;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 15%;
+                    background-color: transparent;
+                    img{
+                    width: 80px;
+                    background-color: transparent;
+                    }
+
+                    span{
+                        background-color: transparent;
+                        font-size: 20px;
+
+                        margin-top: 10px;
+                    }
+                }
+            }
+            :nth-child(1){
+                background-color: v.$color-primary;
+            }
+            :nth-child(2){
+                background-color: v.$color-secondary;
+            }
+            :nth-child(3){
+                background-color: v.$color-google-blue;
+                margin-top: 5px;
+            }
+            :nth-child(4){
+                background-color: v.$color-google-green;
+                margin-top: 5px;
+            }
+        
+        }
+    }
+    .index-footer {
+        width: 100%;
+        padding: 30px 20px 15px;
+
+        .footer-horarios {
+            width: 100%;
+        }
+
+        .footer-title {
+            font-size: 20px;
+            font-family: c.$font-primary;
+            margin-bottom: 20px;
+            
+        }
+
+        .horario-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 15px;
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .horario-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .horario-title {
+            font-family: c.$font-primary;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .horario-text {
+            font-family: c.$font-tertiary;
+            font-size: 14px;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+
+            font-family: c.$font-tertiary;
+            font-size: 12px;
+        }
+    }
+}

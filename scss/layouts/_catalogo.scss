@@ -1,0 +1,195 @@
+@use "../base/colors" as v;
+@use "../base/typography" as c;
+
+
+.catalogo-body{
+    background-color: v.$color-background-whiteCream;
+
+    .catalogo-header{
+        display: flex;
+        margin: 10px;
+        padding-bottom: 20px;
+        .isotipo{
+            width: 80px;
+            height: 80px;
+        }
+        .logotipo{
+            width: 270px;
+            height: 80px;
+        }
+
+    }
+
+    .catalogo-main{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+
+        .hero-catalogo-main{
+            background-color: v.$color-primary;
+            border-radius: 20px;
+
+            width: 320px;
+            height: 156px;
+            margin: 15px;
+            display: flex;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10px;
+                .catalogo-title{
+                    color: v.$color-secondary;
+                    
+                    font-family: c.$font-tertiary;
+                    font-weight: bold;
+                    font-size: 10px;
+
+                    margin-bottom: 15px;
+                }
+                .catalogo-bspan{
+                    font-size: 28px;
+                    font-weight: bold;
+                    font-family: c.$font-primary;
+
+                    color: v.$color-background-whiteCream;
+                }
+                .catalogo-sspan{
+                    font-size: 12px;
+                    font-weight: 400;
+                    font-family: c.$font-tertiary;
+
+                    color: v.$color-background-whiteCream;
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .body-catalogo-main{
+            .title-body-catalogo-main{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                padding: 15px;
+
+                h2{
+                    font-family: c.$font-primary;
+                    font-weight: bold;
+                    font-size: 19px;
+                }
+                span{
+                    font-family: c.$font-tertiary;
+                    font-weight: 500;
+                    font-size: 11px;
+                }
+            }
+
+            .item-catalogo-main{
+                text-decoration: none;
+                color: v.$color-background-blackCharcoal;
+                .item-body-catalogo-main{
+                    display: flex;
+                    justify-content: space-around;
+                    width: 320px;
+                    height: 80px;
+                    margin: 20px;
+                    border: solid 1px black;
+                    border-radius: 15px;
+                    align-items: center;
+
+                    .logo-item-catalogo{
+                        width: 64px;
+                        height: 64px;
+                        border-radius: 15%;
+                        
+                    }
+                    .texto-item-catalogo{
+                        width: 150px;
+
+                        h3{
+                            font-family: c.$font-secondary;
+                            font-weight: 600;
+                            font-size: 18px;
+
+                            color: v.$color-primary;
+                        }
+                        span{
+                            font-family: c.$font-tertiary;
+                            font-weight: 400;
+                            font-size: 11px;
+
+                            color: v.$color-background-blackCharcoal;
+                        }
+                    }
+                    .arrow{
+                        width: 45px;
+                        color: v.$color-primary;
+                    }
+
+                    .ipollo{
+                        background-color: v.$color-primary;
+                    }
+                    .ipescado{
+                        background-color: v.$color-cian;
+                    }
+                    .idespensa{
+                        background-color: v.$color-verduras;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        svg{
+                            width: 55px;
+                            height: 55px;
+                        }
+                    }
+                    .ipostre{
+                        background-color: v.$color-postres;
+                    }
+                }
+            }  
+        }
+
+        .gancho-final-catalogo-main{
+            width: 320px;
+            height: 80px;
+            margin: 10px;
+
+            background-color: v.$color-secondary;
+            color: v.$color-background-blackCharcoal;
+
+            border-radius: 14px;
+            div{
+                padding: 15px;
+                
+                h3{
+                    font-family: c.$font-secondary;
+                    font-weight: 600;
+                    font-size: 15px;
+
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-family: c.$font-secondary;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .catalogo-footer{
+        .copyright {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}
+
+// @media screen {
+    
+// }

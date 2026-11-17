@@ -3,19 +3,16 @@
 // @use "./abstracts/mixins";
 
 // 2. Base: estilos generales
-@use "./base/reset";
-@use "./base/typography";
-@use "./base/colors";
+@use "./base/resets";
+// @use "./base/typography";
+// @use "./base/colors";
 
 // 3. Layouts: estructura de la página
-@use "./layouts/main";
-@use "./layouts/restaurante";
-@use "./layouts/redes";
-// @use "./layouts/grid";
-// @use "./layouts/footer";
+@use "./layouts/index";
+@use "./layouts/catalogo";
 
 // 4. Components: componentes reutilizables
 // @use "./components/buttons";
-@use "./components/searchbar";
+// @use "./components/searchbar";
 // @use "./components/cards";
 // @use "./components/accordion";
