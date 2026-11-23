@@ -1,0 +1,65 @@
+@use "../base/colors" as v;
+@use "../base/typography" as c;
+@use "../abstracts/mixins" as *;
+
+.catalogo-productos-body{
+    background-color: v.$color-background-whiteCream;
+}
+
+.c-header-productos{
+    .div-isor{
+        a{
+            display: flex;
+            justify-content: space-evenly;
+            .isotipo{
+                width: 80px;
+                height: 80px;
+            }
+            .logotipo{
+                width: 220px;
+            }
+        }
+    }
+}
+
+.catalogo-productos-main{
+    h1{
+        font-size: 35px;
+        padding: 20px 0;
+        text-align: center;
+    }
+    h2{
+        font-size: 25px;
+        padding: 20px 0;
+        margin-left: 20px;
+    }
+}
+
+@include desktop{
+    .c-header-productos{
+        display: flex;
+        flex-direction: column;
+
+        .div-isor{
+            display: flex;
+            justify-content: space-evenly;
+            a{
+                width: 420px;
+            }
+        }
+    }
+    .catalogo-productos {
+        margin: 15px;
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            gap: 15px;
+
+            .card-producto{
+                width: 100%;
+            }
+        }
+    }
+    
+}

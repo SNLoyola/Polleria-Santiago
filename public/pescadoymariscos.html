@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Tipografias -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Fin -->
+    <title>Polleria Santiago - Pollo</title>
+</head>
+<body class="catalogo-productos-body">
+
+    <header class="c-header-productos">
+        <a href="./catalogo.html">
+            <img class="isotipo" src="../assets/logopolleriapng-001.png" alt="">
+            <img class="logotipo" src="../assets/logopolleriapng-002.png" alt="">
+        </a>
+
+        <nav class="search-cart">
+            <div class="buscador">
+                <input
+                    type="search"
+                    id="buscador-productos"
+                    placeholder="Buscar productos..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <button class="btn-carrito" type="button" aria-label="Abrir carrito" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#23423">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M3.86376 16.4552C3.00581 13.0234 2.57684 11.3075 3.47767 10.1538C4.3785 9 6.14721 9 9.68462 9H14.3153C17.8527 9 19.6214 9 20.5222 10.1538C21.4231 11.3075 20.9941 13.0234 20.1362 16.4552C19.5905 18.6379 19.3176 19.7292 18.5039 20.3646C17.6901 21 16.5652 21 14.3153 21H9.68462C7.43476 21 6.30983 21 5.49605 20.3646C4.68227 19.7292 4.40943 18.6379 3.86376 16.4552Z" stroke="#1C274C" stroke-width="1.5"></path> <path opacity="0.5" d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4" stroke="#1C274C" stroke-width="1.5"></path> <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z" stroke="#1C274C" stroke-width="1.5"></path> <path opacity="0.5" d="M8 13V17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.5" d="M16 13V17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.5" d="M12 13V17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                </svg>
+            </button>
+        </nav>
+
+    </header>
+
+    <p id="mensaje-sin-resultados" hidden>
+    No encontramos productos que coincidan con tu búsqueda.
+    </p>
+
+    <!-- Modal carrito -->
+    <div class="carrito-overlay" id="carrito-overlay" hidden>
+
+        <section class="carrito" id="carrito" role="dialog" aria-modal="true" aria-labelledby="carrito-titulo">
+
+            <div class="carrito-header">
+                <h2 id="carrito-titulo">Mi pedido</h2>
+
+                <button class="carrito-cerrar" type="button" aria-label="Cerrar carrito">
+                    &times;
+                </button>
+            </div>
+
+            <div id="carrito-productos">
+                <p>Tu carrito está vacío.</p>
+            </div>
+
+            <div class="carrito-resumen">
+                <p>
+                    Total:
+                    <strong id="carrito-total">$0</strong>
+                </p>
+            </div>
+
+        </section>
+
+    </div>
+    <!-- Fin carrito -->
+
+    <main class="catalogo-productos-main" data-categoria="pescado">
+    
+    <h1 class="titulo-categoria">Pescados y Mariscos</h1>
+
+    <h2 class="subtitulo-categoria">Nombre qcyo</h2>
+
+        <section class="catalogo-productos">
+            
+            <div class="productos-grid">
+
+                
+
+            </div>
+
+        </section>
+
+    <h2>Pollo entero y derivados</h2>
+
+        <section class="catalogo-productos">
+            
+            <div class="productos-grid">
+
+                
+
+            </div>
+
+        </section>
+
+    <h2>Rebozados</h2>
+
+        <section class="catalogo-productos">
+            
+            <div class="productos-grid">
+
+                
+
+            </div>
+
+        </section>
+
+    <h2>Milanesas</h2>
+
+        <section class="catalogo-productos">
+            
+            <div class="productos-grid">
+
+                
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/buscador.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/productos.js"></script>
+</body>
+</html>

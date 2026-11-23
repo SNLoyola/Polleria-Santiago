@@ -1,0 +1,78 @@
+@use "../base/colors" as v;
+@use "../base/typography" as c;
+@use "../abstracts/mixins" as *;
+
+.footer {
+    background-color: v.$color-primary;
+    color: v.$color-background-whiteCream;
+    padding: 35px 20px 15px;
+
+    .footer-contenido {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    h2, h3 {
+        color: v.$color-background-whiteCream;
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        opacity: 0.85;
+    }
+
+    .footer-logo {
+        font-size: 1.35rem;
+        margin-bottom: 8px;
+    }
+
+    .footer-link {
+        display: block;
+        color: v.$color-background-whiteCream;
+        text-decoration: none;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+
+        &:hover {
+            color: v.$color-secondary;
+        }
+    }
+
+    .footer-bottom {
+        max-width: 1100px;
+        margin: 30px auto 0;
+        padding-top: 15px;
+        border-top: 1px solid rgba(244, 241, 233, 0.2);
+        text-align: center;
+
+        p {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    .footer {
+        .footer-contenido {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-identidad {
+            max-width: 300px;
+        }
+    }
+
+}

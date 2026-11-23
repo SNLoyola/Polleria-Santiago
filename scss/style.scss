@@ -1,18 +1,23 @@
 // 1. Abstracts: variables, mixins y funciones
-// @use "./abstracts/variables";
-// @use "./abstracts/mixins";
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
 
 // 2. Base: estilos generales
 @use "./base/resets";
+@use "./base/produtos-grid";
 // @use "./base/typography";
 // @use "./base/colors";
 
 // 3. Layouts: estructura de la página
 @use "./layouts/index";
 @use "./layouts/catalogo";
+@use "./layouts/catalogo-productos";
+@use "../scss/layouts/footer-catalogo";
 
 // 4. Components: componentes reutilizables
 // @use "./components/buttons";
-// @use "./components/searchbar";
-// @use "./components/cards";
-// @use "./components/accordion";
+@use "./components/searchbar";
+@use "./components/card-productos";
+@use "./components/mensaje-sin-resultados";
+@use "./components/carrito";
+@use "./components/navegador-categorias";

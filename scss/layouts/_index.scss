@@ -1,5 +1,6 @@
 @use "../base/colors" as v;
 @use "../base/typography" as c;
+@use "../abstracts/mixins" as *;
 
 .index-body{
     background-color: v.$color-background-whiteCream;
@@ -127,4 +128,94 @@
             font-size: 12px;
         }
     }
+}
+
+
+// TABLET
+@include tablet {
+
+    
+
+}
+
+// DESKTOP
+@include desktop {
+
+    .index-body{
+        .header{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 420px;
+            }
+        }
+
+        .index-main{
+            display: grid;
+            justify-items: center;
+
+            .main-block{
+                max-width: 1000px;
+                width: 100%;
+
+                .elementos{
+                    width: 90%;
+                    height: 142px;
+                    border-radius: 20px;
+                    margin-bottom: 30px;
+
+                    display: flex;
+
+                    a{
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        justify-content: space-evenly;
+                        span{
+                            margin: 0;
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .index-footer {
+            // background-color: red;
+
+            .footer-horarios {
+                .footer-title {
+                    font-size: 25px; 
+                }
+                .horario-list {
+                    grid-template-columns: repeat(7, 1fr);
+                    
+                }
+                
+                .horario-item {
+                    .horario-title {
+                        font-size: 20px;
+                    }
+
+                    .horario-text {
+                        font-size: 18px;
+                    }
+                }
+ 
+            }
+
+            .copyright {
+                font-size: 18px;
+            }
+
+        }
+
+    }
+}
+
+// DESKTOP LARGE
+@include desktop-large {
+
+    
+
 }

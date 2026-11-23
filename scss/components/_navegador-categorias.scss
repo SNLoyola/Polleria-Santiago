@@ -1,0 +1,107 @@
+@use "../base/colors" as v;
+@use "../base/typography" as c;
+@use "../abstracts/mixins" as *;
+
+.navegador-categorias {
+    width: 100%;
+    overflow: hidden;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    
+    svg{
+        color: white;
+    }
+
+    .categorias-slider {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% - 30px) / 4);
+        gap: 10px;
+
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .nav-categoria {
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+        scroll-snap-align: start;
+        transition: transform 0.2s ease;
+
+        img {
+            width: 48%;
+            height: 48%;
+            object-fit: contain;
+        }
+
+        &:active {
+            transform: scale(0.94);
+        }
+    }
+
+    .nav-pollo { background-color: v.$color-primary; }
+    .nav-pescado { background-color: v.$color-primary; }
+    .nav-burger { background-color: v.$color-secondary; }
+    .nav-pizza { background-color: v.$color-secondary; }
+    .nav-pastas { background-color: v.$color-det-green; }
+    .nav-vegetales { background-color: v.$color-det-green; }
+    .nav-postres { background-color: v.$color-background-Cream; }
+    .nav-panificados { background-color: v.$color-background-Cream; }
+
+    .nav-categoria.activo {
+        outline: 3px solid v.$color-primary;
+        outline-offset: -3px;
+    }
+}
+
+@include tablet{
+    .navegador-categorias {
+        padding: 5px 35px;
+
+        .categorias-slider {
+            grid-auto-columns: calc((100% - 45px) / 4);
+            gap: 15px;
+        }
+
+        .nav-categoria {
+            border-radius: 16px;
+            width: 100%;
+
+            img {
+                width: 45%;
+                height: 45%;
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+                filter: brightness(1.08);
+            }
+        }
+    }
+}
+
+@include desktop{
+    .navegador-categorias {
+
+        .categorias-slider {
+            gap: 20px;
+            grid-auto-columns: auto;
+        }
+
+        .nav-categoria {
+            border-radius: 18px;
+            width: 100%;
+        }
+    }
+
+}

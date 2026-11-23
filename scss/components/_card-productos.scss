@@ -1,0 +1,184 @@
+@use "../base/colors" as v;
+@use "../base/typography" as c;
+@use "../abstracts/mixins" as *;
+
+.card-producto {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    width: 320px;
+    min-width: 0;
+
+    background-color: #FFFFFF;
+    border: 1px solid #EAEDE9;
+    border-radius: 14px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    // Imagen
+    > img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        background-color: #F1F0EB;
+    }
+
+    // Contenido
+    &_contenido {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+        padding: 12px;
+    }
+
+    &_title {
+        margin: 0;
+        font-size: 1.65rem;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #202820;
+    }
+
+    &_descripcion {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #777E77;
+    }
+
+    &_precio {
+        margin: 6px 0 0;
+        font-size: 1.38rem;
+        font-weight: 800;
+        color: #183D2B;
+    }
+
+    // Botones
+    &_botones {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 12px 12px;
+
+        button {
+            width: 100%;
+            min-height: 44px;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:first-child {
+            color: #FFFFFF;
+            background-color: #23583e;
+            border: 1px solid #183D2B;
+            margin-top: 17px;
+        }
+
+        
+    }
+}
+
+// Desktop
+
+@include desktop{
+
+.card-producto {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    background-color: #FFFFFF;
+    border: 1px solid #EAEDE9;
+    border-radius: 16px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+    }
+
+    // Imagen
+    > img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        background-color: #F1F0EB;
+    }
+
+    // Contenido
+    &_contenido {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px 16px 12px;
+        flex: 1;
+    }
+
+    &_title {
+        margin: 0;
+        color: #202820;
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    &_descripcion {
+        margin: 0;
+        color: #777E77;
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+
+    &_precio {
+        margin: 8px 0 0;
+        color: #183D2B;
+        font-size: 1.4rem;
+        font-weight: 800;
+    }
+
+    // Botones
+    &_botones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 0 16px 16px;
+
+        button {
+            min-height: 42px;
+            padding: 10px;
+            border-radius: 9px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:first-child {
+            color: #FFFFFF;
+            background-color: #183D2B;
+            border: 1px solid #183D2B;
+
+            &:hover {
+                background-color: #24583D;
+            }
+        }
+
+        button:last-child {
+            color: #183D2B;
+            background-color: #FFFFFF;
+            border: 1px solid #183D2B;
+
+            &:hover {
+                background-color: #F0F5F1;
+            }
+        }
+    }
+}
+}

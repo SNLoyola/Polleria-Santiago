@@ -1,0 +1,92 @@
+@use "../base/colors" as v;
+@use "../base/typography" as c;
+@use "../abstracts/mixins" as *;
+
+.search-cart{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: 80%;
+    padding: 6px 6px 6px 14px;
+
+    background-color: whitesmoke;
+    border: 1px solid rgba(v.$color-primary, 0.20);
+    border-radius: 12px;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    // Input
+    input {
+        flex: 1;
+        min-width: 0;
+        padding: 10px 0;
+
+        font-family: inherit;
+        font-size: 1.1rem;
+        color: v.$color-background-blackCharcoal;
+
+        background: transparent;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            color: rgba(v.$color-background-blackCharcoal, 0.55);
+        }
+    }
+
+    // Botón / icono
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+
+        background-color: v.$color-primary;
+        border-radius: 9px;
+        border: none;
+        cursor: pointer;
+        color: v.$color-background-whiteCream;
+        svg {
+            width: 20px;
+            height: 20px;
+
+            path {
+                stroke: v.$color-background-whiteCream;
+            }
+        }
+    }
+
+    // Estado de foco
+    &:focus-within {
+        border-color: v.$color-primary;
+        
+    }
+}
+
+.btn-carrito{
+    border: none;
+    background-color: transparent;
+
+    svg{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@include desktop{
+    .search-cart{
+        width: 600px;
+    }
+}

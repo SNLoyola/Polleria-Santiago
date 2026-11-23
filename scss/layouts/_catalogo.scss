@@ -1,24 +1,27 @@
 @use "../base/colors" as v;
 @use "../base/typography" as c;
+@use "../abstracts/mixins" as *;
 
+
+.catalogo-header{
+        a{
+            display: flex;
+            margin: 10px;
+            padding-bottom: 20px;
+            .isotipo{
+            width: 80px;
+            height: 80px;
+            }
+            .logotipo{
+                width: 270px;
+                height: 80px;
+            }
+        }
+
+}
 
 .catalogo-body{
     background-color: v.$color-background-whiteCream;
-
-    .catalogo-header{
-        display: flex;
-        margin: 10px;
-        padding-bottom: 20px;
-        .isotipo{
-            width: 80px;
-            height: 80px;
-        }
-        .logotipo{
-            width: 270px;
-            height: 80px;
-        }
-
-    }
 
     .catalogo-main{
         display: flex;
@@ -68,7 +71,7 @@
         .body-catalogo-main{
             .title-body-catalogo-main{
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
                 align-items: center;
 
                 padding: 15px;
@@ -85,70 +88,80 @@
                 }
             }
 
-            .item-catalogo-main{
-                text-decoration: none;
-                color: v.$color-background-blackCharcoal;
-                .item-body-catalogo-main{
-                    display: flex;
-                    justify-content: space-around;
-                    width: 320px;
-                    height: 80px;
-                    margin: 20px;
-                    border: solid 1px black;
-                    border-radius: 15px;
-                    align-items: center;
+            .items-catalogo-main{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
 
-                    .logo-item-catalogo{
-                        width: 64px;
-                        height: 64px;
-                        border-radius: 15%;
+                
+
+                .item-catalogo-main{
+                    text-decoration: none;
+                    color: v.$color-background-blackCharcoal;
+
+                    width: 170px;
+                    height: 170px;
+                    .item-body-catalogo-main{
+                        width: 100%;
+                        height: 100%;
+                        
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+                        text-align: center;
+
+                        .logo-item-catalogo{
+                            width: 120px;
+                            height: 120px;
+                            border-radius: 15%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            svg{
+                                width: 80px;
+                                height: 80px;
+
+                                color: white;
+                            }
+                        }
+                        .texto-item-catalogo{
+                            // width: 150px;
+
+                            h3{
+                                font-family: c.$font-secondary;
+                                font-weight: 600;
+                                font-size: 18px;
+
+                                color: v.$color-primary;
+                            }
+                            span{
+                                font-family: c.$font-tertiary;
+                                font-weight: 400;
+                                font-size: 11px;
+
+                                color: v.$color-background-blackCharcoal;
+                            }
+                        }      
                         
                     }
-                    .texto-item-catalogo{
-                        width: 150px;
+                    .iprimary{
+                    background-color: v.$color-primary;
+                    }
+                    .isecondary{
+                    background-color: v.$color-secondary;
+                    }
+                    .itertiary{
+                    background-color: v.$color-det-green;
+                    }
+                    .ilacteos{
+                    background-color: v.$color-background-Cream;
+                    }
+                }  
 
-                        h3{
-                            font-family: c.$font-secondary;
-                            font-weight: 600;
-                            font-size: 18px;
+            }
 
-                            color: v.$color-primary;
-                        }
-                        span{
-                            font-family: c.$font-tertiary;
-                            font-weight: 400;
-                            font-size: 11px;
-
-                            color: v.$color-background-blackCharcoal;
-                        }
-                    }
-                    .arrow{
-                        width: 45px;
-                        color: v.$color-primary;
-                    }
-
-                    .ipollo{
-                        background-color: v.$color-primary;
-                    }
-                    .ipescado{
-                        background-color: v.$color-cian;
-                    }
-                    .idespensa{
-                        background-color: v.$color-verduras;
-
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        svg{
-                            width: 55px;
-                            height: 55px;
-                        }
-                    }
-                    .ipostre{
-                        background-color: v.$color-postres;
-                    }
-                }
-            }  
         }
 
         .gancho-final-catalogo-main{
@@ -190,6 +203,102 @@
     }
 }
 
-// @media screen {
+// Tablet
+@include tablet{
     
-// }
+}
+
+// Desktop
+@include desktop{
+    .catalogo-body{
+
+        .catalogo-header{
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .catalogo-main{
+            
+            .hero-catalogo-main{
+                width: 620px;
+                height: 190px;
+
+                div{
+                    display: flex;
+                    justify-content: space-around;
+
+                    .catalogo-title{
+                        font-size: 18px;
+                    }
+
+                    .catalogo-bspan{
+                        font-size: 30px;
+                    }
+
+                    .catalogo-sspan{
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .body-catalogo-main{
+                .title-body-catalogo-main{
+                    width: 710px;
+                    justify-content: space-between;
+
+                    h2{
+                        font-size: 22px;
+                    }
+                    span{
+                        font-size: 15px;
+                    }
+                }
+
+                .items-catalogo-main{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+
+                    .item-catalogo-main{
+                        width: 230px;
+                        height: 230px;
+                        .item-body-catalogo-main{
+                            .logo-item-catalogo{
+                                width: 180px;
+                                height: 180px;
+                            }
+                        
+                        }
+                    }
+                }
+
+            }
+
+            .gancho-final-catalogo-main{
+                width: 520px;
+                height: 100px;
+
+                margin-top: 40px;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 100%;
+                    justify-content: space-around;
+
+                    h3{
+                        font-size: 23px;
+                    }
+                    p{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Desktop large
+@include desktop-large{
+    
+}
