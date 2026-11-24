@@ -164,26 +164,23 @@ botonesAgregar.forEach(function (boton) {
 
     const tarjeta = boton.closest(".card-producto");
 
-    const campoCantidad = tarjeta.querySelector(".cantidad-producto");
+    // Obtenemos los datos del producto desde el HTML.
+    const unidad = tarjeta.dataset.unidad;
 
-    const cantidad = Number(campoCantidad.value);
-
-    // Validamos que la cantidad sea mayor que cero.
-    if (!Number.isFinite(cantidad) || cantidad <= 0) {
-      alert("Ingresá una cantidad válida.");
-      return;
-    }
+    // Definimos la cantidad inicial según el tipo de producto.
+    const cantidad = 1;
 
     const producto = {
       id: tarjeta.dataset.productoId,
       nombre: tarjeta.dataset.productoNombre,
       precio: Number(tarjeta.dataset.precio),
-      unidad: tarjeta.dataset.unidad,
+      unidad: unidad,
       cantidad: cantidad,
-      incremento: tarjeta.dataset.unidad === "kg" ? 0.1 : 1,
+      incremento: unidad === "kg" ? 0.1 : 1,
       indicaciones: ""
     };
 
+    // Comprobamos si el producto ya existe en el carrito.
     const productoExistente = carrito.find(function (item) {
       return item.id === producto.id;
     });

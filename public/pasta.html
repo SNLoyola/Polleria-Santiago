@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Tipografias -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Fin -->
+    <title>Polleria Santiago - Hamburguesas y Medallones</title>
+</head>
+<body class="catalogo-productos-body">
+
+    <header class="c-header-productos">
+        
+        <div class="div-isor">
+            <a href="./catalogo.html">
+                <img class="isotipo" src="../assets/logopolleriapng-001.png" alt="">
+                <img class="logotipo" src="../assets/logopolleriapng-002.png" alt="">
+            </a>
+
+            <nav class="search-cart">
+                <div class="buscador">
+                    <input
+                        type="search"
+                        id="buscador-productos"
+                        placeholder="Buscar productos..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <button class="btn-carrito" type="button" aria-label="Abrir carrito" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#23423">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M3.86376 16.4552C3.00581 13.0234 2.57684 11.3075 3.47767 10.1538C4.3785 9 6.14721 9 9.68462 9H14.3153C17.8527 9 19.6214 9 20.5222 10.1538C21.4231 11.3075 20.9941 13.0234 20.1362 16.4552C19.5905 18.6379 19.3176 19.7292 18.5039 20.3646C17.6901 21 16.5652 21 14.3153 21H9.68462C7.43476 21 6.30983 21 5.49605 20.3646C4.68227 19.7292 4.40943 18.6379 3.86376 16.4552Z" stroke="#1C274C" stroke-width="1.5"></path> <path opacity="0.5" d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4" stroke="#1C274C" stroke-width="1.5"></path> <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z" stroke="#1C274C" stroke-width="1.5"></path> <path opacity="0.5" d="M8 13V17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.5" d="M16 13V17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.5" d="M12 13V17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+
+        <nav class="navegador-categorias" aria-label="Categorías">
+
+            <div class="categorias-slider">
+
+                <a href="pollo.html" class="nav-categoria nav-pollo">
+                    <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>Chicken</title> <g id="Chicken" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"> <path d="M15,21.5 C15,22.3284271 14.3284271,23 13.5,23 C12.8471533,23 12.2917181,22.5829319 12.0856015,22.000703 L11.9143985,22.000703 C11.7082819,22.5829319 11.1528467,23 10.5,23 C9.67157288,23 9,22.3284271 9,21.5 C9,20.6715729 9.67157288,20 10.5,20 C10.6755804,20 10.8441149,20.0301673 11.000703,20.0856015 L11,17 L13,17 L13.0002925,20.0852495 C13.1565993,20.0300396 13.3247916,20 13.5,20 C14.3284271,20 15,20.6715729 15,21.5 Z M12,2 C15.3137085,2 18,4.6862915 18,8 C18,9.24718781 17.2903814,10.9098371 15.8711442,12.9879478 C15.3041888,13.8180931 15.0006409,14.7998636 15.0001041,15.8051395 L15,16 C15,16.5522847 14.5522847,17 14,17 L10,17 C9.44771525,17 9,16.5522847 9,16 L9,15.8075812 C9.00003272,14.8012271 8.69638083,13.818286 8.12876101,12.9872889 C6.709587,10.9096137 6,9.24718405 6,8 C6,4.6862915 8.6862915,2 12,2 Z" id="Combined-Shape" stroke="#fff" transform="translate(12.000000, 12.500000) rotate(-315.000000) translate(-12.000000, -12.500000) "> </path> </g> </g>
+                    </svg>
+                </a>
+
+                <a href="pescadoymariscos.html" class="nav-categoria nav-pescado">
+                    <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Fish</title> <g id="Fish" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"> <path d="M8.36037413,9.37780173 C12.9996449,6.48411516 19.1063134,7.89919075 22,12.5384615 L22,12.5384615 L21.7714102,12.8882815 C21.2212943,13.6925508 20.5550068,14.4118491 19.7936525,15.0224156 C15.9018582,18.1434325 10.3739711,17.8468022 6.83709622,14.5311796 C6.27002204,15.9932862 4.79851304,16.9798163 3.15189288,16.8603536 L3,16.8461538 L3,16.5884428 C3,15.0437123 3.67627478,13.6327133 4.77206207,12.6672238 C3.75338032,11.8768407 3.08250128,10.6671435 3.00709918,9.30699879 L3,9.05027424 L3,8.23076923 L3.20727682,8.23910502 C4.76443449,8.34004935 6.09767297,9.29463397 6.72703405,10.6524074 C7.2233625,10.1730892 7.77122081,9.74527868 8.36037413,9.37780173 Z M14.0372476,17.1902154 L14.1687971,17.1838145 C13.439803,17.9097888 12.5461565,18.4611948 11.5290784,18.759803 C10.7388556,18.9918079 9.94352384,19.0508336 9.17656914,18.9580635 C9.55107882,18.1973838 9.84153946,17.384199 10.0385168,16.536936 C11.3133173,17.0284034 12.6772642,17.249253 14.0372476,17.1902154 Z M15.0132594,7.83862474 L15.1167812,7.99444821 C13.1571593,7.68971933 11.098444,7.96928046 9.22076426,8.89804486 C8.64695948,7.68562475 7.87730735,6.62873797 6.97077654,5.76506832 C7.36191185,5.54761966 7.78075942,5.37001767 8.22293679,5.24019696 C10.8327336,4.47397571 13.4982542,5.59447699 15.0132594,7.83862474 Z" id="Combined-Shape" stroke="#fff"> </path> <path d="M17.5,11.6 L17.5,11.5 L17.5,11.5 L17.5,11.6 Z" id="Rectangle-Copy-3" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"> </path> </g> </g>
+                    </svg>
+                </a>
+
+                <a href="" class="nav-categoria nav-burger">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 11C21.1046 11 22 11.8954 22 13C22 14.1046 21.1046 15 20 15H4C2.89543 15 2 14.1046 2 13C2 11.8954 2.89543 11 4 11M20 11H4M20 11C20.5523 11 21.0079 10.5493 20.942 10.0009C20.4323 5.75576 16.6233 4 12 4C7.37672 4 3.56765 5.75576 3.05796 10.0009C2.99212 10.5493 3.44772 11 4 11M3 15H21V17C21 18.6569 19.6569 20 18 20H6C4.34315 20 3 18.6569 3 17V15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+
+                <a href="" class="nav-categoria nav-pizza">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 8.5C9.5 6.5 14.5 6.5 19.5 8.5M10.5 11.5H10.51M13.5 11.5H13.51M12 14.5H12.01M3 6C9 3 15 3 21 6L12 20.5L3 6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+
+                <a href="" class="nav-categoria nav-pastas">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.5 3C7.7 3.6 7.5 4.2 7.5 5C7.5 5.8 7.7 6.4 8.5 7M12.5 3C11.7 3.6 11.5 4.2 11.5 5C11.5 5.8 11.7 6.4 12.5 7M16.5 3C15.7 3.6 15.5 4.2 15.5 5C15.5 5.8 15.7 6.4 16.5 7M3 11H21C21 16 17 20 12 20C7 20 3 16 3 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+
+                <a href="" class="nav-categoria nav-vegetales">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 12C6.5 11.2044 6.81607 10.4413 7.37868 9.87868C7.94129 9.31607 8.70435 9 9.5 9C10.2956 9 11.0587 9.31607 11.6213 9.87868C12.1839 10.4413 12.5 11.2044 12.5 12C12.5 7.5 15 4.5 19.5 4C19.5 8.5 18 11 16 12M3 12H21C21 17 17 21 12 21C7 21 3 17 3 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+
+                <a href="" class="nav-categoria nav-panificados">
+                    <svg fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.342 47.342" xml:space="preserve" stroke="#fff" color="rgb(255, 255, 255)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <g> <path d="M39.645,15.841c-0.014-0.008-0.025-0.017-0.038-0.025c-0.29-0.191-0.664-0.202-0.964-0.026 c-0.301,0.176-0.475,0.507-0.447,0.854c0.21,2.857-0.008,5.423-0.225,7.063c-0.021,0.151-0.147,0.265-0.301,0.271 c-0.152,0.005-0.285-0.103-0.316-0.251c-0.871-4.412-2.584-8.213-3.656-10.305c-0.116-0.226-0.32-0.393-0.564-0.462 c-2.828-0.793-5.451-1.07-7.082-1.158c-0.287-0.016-0.564,0.105-0.75,0.327c-0.184,0.221-0.252,0.517-0.186,0.797 c0.995,4.145,0.73,8.72,0.49,11.043c-0.016,0.149-0.135,0.267-0.283,0.279c-0.148,0.014-0.286-0.081-0.327-0.224 c-0.784-2.719-2.561-8.494-4.32-11.5c-0.179-0.306-0.52-0.481-0.872-0.448c-2.388,0.223-4.684,0.566-6.73,1.493 c-0.001,0-0.001,0-0.002,0c-0.405,0-0.646,0.435-0.579,0.863c0.596,3.762,0.32,7.263,0.045,9.34 c-0.021,0.151-0.146,0.232-0.3,0.237c-0.152,0.005-0.286-0.117-0.316-0.268c-0.563-2.852-1.48-5.458-2.348-7.506 c-0.126-0.298-0.374-0.531-0.682-0.633c-0.307-0.103-0.643-0.07-0.923,0.093C2.459,18.895,0,22.635,0,26.454 c0,8.124,10.598,9.087,23.671,9.087c13.073,0,23.67-0.963,23.67-9.087C47.344,22.953,45.159,19.508,39.645,15.841z"></path> </g> </g> </g>
+                    </svg>
+                </a>
+
+                <a href="" class="nav-categoria nav-postres">
+                    <svg fill="#fff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" stroke="#fff" color="rgb(255, 255, 255)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <g> <path d="M359.858,72.281C345.235,45.287,315.564,0,281.155,0c-11.83,0-28.285,5.333-39.504,30.737 c-9.822,22.239-30.653,37.355-52.706,53.357c-31.157,22.608-66.083,47.963-72.207,97.487H395.39 C392.125,148.258,379.135,107.868,359.858,72.281z"></path> </g> </g> <g> <g> <path d="M76.516,212.949c3.611,45.008,22.145,96.516,50.191,138.096c32.377,48.001,72.221,76.827,113.606,82.675v46.909H197.19 c-8.662,0-15.685,7.023-15.685,15.685c0,8.662,7.023,15.685,15.685,15.685h117.617c8.662,0,15.685-7.023,15.685-15.685 c0-8.662-7.023-15.685-15.685-15.685h-43.124V433.72c41.384-5.849,81.23-34.674,113.607-82.675 c28.045-41.58,46.579-93.087,50.192-138.096H76.516z"></path> </g> </g> </g>
+                    </svg>
+                </a>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <p id="mensaje-sin-resultados" hidden>
+    No encontramos productos que coincidan con tu búsqueda.
+    </p>
+
+    <!-- Modal carrito -->
+    <div class="carrito-overlay" id="carrito-overlay" hidden>
+
+        <section class="carrito" id="carrito" role="dialog" aria-modal="true" aria-labelledby="carrito-titulo">
+
+            <div class="carrito-header">
+                <h2 id="carrito-titulo">Mi pedido</h2>
+
+                <button class="carrito-cerrar" type="button" aria-label="Cerrar carrito">
+                    &times;
+                </button>
+            </div>
+
+            <div id="carrito-productos">
+                <p>Tu carrito está vacío.</p>
+            </div>
+
+            <div class="carrito-resumen">
+                <p>
+                    Total:
+                    <strong id="carrito-total">$0</strong>
+                </p>
+            </div>
+
+
+            <div class="carrito-datos-cliente">
+
+                <h3>Datos para el pedido</h3>
+
+                <div class="campo-cliente">
+                    <label for="cliente-nombre">Nombre:</label>
+                    <input
+                    type="text"
+                    id="cliente-nombre"
+                    placeholder="Tu nombre"
+                    required
+                    >
+                </div>
+
+                <div class="campo-cliente">
+                    <label for="cliente-direccion">Dirección:</label>
+                    <input
+                    type="text"
+                    id="cliente-direccion"
+                    placeholder="Calle, número y barrio"
+                    required
+                    >
+                </div>
+
+                <div class="campo-cliente">
+                    <label for="comentarios-pedido">
+                    Comentarios generales (opcional):
+                    </label>
+                    <textarea
+                    id="comentarios-pedido"
+                    placeholder="¿Querés agregar alguna aclaración?"
+                    rows="3"
+                    ></textarea>
+                </div>
+
+            </div>
+
+            <button
+            type="button"
+            id="btn-enviar-whatsapp"
+            class="btn-enviar-whatsapp"
+            >
+            Enviar pedido por WhatsApp
+            </button>
+
+
+        </section>
+
+    </div>
+    <!-- Fin carrito -->
+
+    <main class="catalogo-productos-main" data-categoria="burger">
+
+    <h1 class="titulo-categoria">Pastas y comidas preparadas</h1>
+
+    <h2 class="subtitulo-categoria">Burger test</h2>
+
+        <section class="catalogo-productos">
+            
+            <div class="productos-grid">
+
+                <article 
+                class="card-producto"
+                data-producto-id="milanesa"
+                data-producto-nombre="milanesa"
+                data-precio="8000" 
+                data-unidad="kg">
+
+                    <img src="../assets/img-not-found.jpg" alt="">
+
+                    <div class="card-producto_contenido">
+                        <h3 class="card-producto_title"></h3>
+                        <p class="card-producto_descripcion">
+                            Lorem, ipsum dolor sit amet consectetur.
+                        </p>
+                        <p class="card-producto_precio"></p>
+                    </div>
+ 
+                    <div class="card-producto_botones">
+                        <button type="button" class="btn-agregar-carrito">
+                            Agregar al carrito
+                        </button>
+                    </div>
+
+                </article>
+
+                
+
+            </div>
+        </section>
+
+    <h2 class="subtitulo-categoria">Pollo entero y derivados</h2>
+
+        <section class="catalogo-productos">
+
+            <div class="productos-grid">
+
+                
+            </div>
+        </section>
+
+    <h2 class="subtitulo-categoria">Rebozados</h2>
+
+        <section class="catalogo-productos">
+            
+            <div class="productos-grid">
+
+                
+
+            </div>
+
+        </section>
+
+    <h2 class="subtitulo-categoria">Milanesas</h2>
+
+        <section class="catalogo-productos">
+
+            <div class="productos-grid">
+
+                
+            </div>
+        </section>
+
+    </main>
+<!-- -productos -->
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+            <!-- IDENTIDAD -->
+            <div class="footer-identidad">
+                <h2 class="footer-logo">Pollería Santiago</h2>
+                <p>
+                    Calidad y variedad para acompañar tus comidas.
+                </p>
+            </div>
+
+            <!-- CONTACTO -->
+            <div class="footer-contacto">
+                <h3>Contacto</h3>
+
+                <a href="https://wa.me/5493876130871" target="_blank" class="footer-link">
+                    WhatsApp
+                </a>
+
+                <a href="#" class="footer-link">
+                    Cómo llegar
+                </a>
+            </div>
+
+            <!-- HORARIOS -->
+            <div class="footer-horarios">
+                <h3>Atención</h3>
+                <p>Lunes a sábado</p>
+                <p>Horario a confirmar</p>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>© 2026 Pollería Santiago. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+    <script src="../js/buscador.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/productos.js"></script>
+</body>
+</html>
